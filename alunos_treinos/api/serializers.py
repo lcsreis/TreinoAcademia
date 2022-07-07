@@ -4,4 +4,4 @@ from alunos_treinos.models import AlunoTreino
 class AlunoTreinoSerializer(ModelSerializer):
     class Meta:
         model = AlunoTreino
-        fields = ['id', 'aluno', 'nome', 'exercicios']
+        fields = ['id', 'aluno', 'nome', 'ativo', 'datacriado', 'dataatualizado']

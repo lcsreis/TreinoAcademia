@@ -19,12 +19,14 @@ from rest_framework.routers import DefaultRouter
 from alunos.api.viewsets import AlunoViewSet
 from django.conf.urls import include
 from alunos_treinos.api.viewsets import AlunoTreinoViewSet
+from alunos_treinos_exercicios.api.viewsets import AlunoTreinoExercicioViewSet
 from exercicios.api.viewsets import ExercicioViewSet
 
 router = DefaultRouter()
 router.register(r'aluno', AlunoViewSet, basename="Alunos")
 router.register(r'alunotreino', AlunoTreinoViewSet, basename="Alunos_Treinos")
 router.register(r'exercicio', ExercicioViewSet, basename="Exercicios")
+router.register(r'treinoexercicio', AlunoTreinoExercicioViewSet, basename="Treinos_Exercicios")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
